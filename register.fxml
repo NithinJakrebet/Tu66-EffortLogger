@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="asuEffortLogger1.RegisterController">
+    <VBox alignment="CENTER" layoutX="50" layoutY="50" spacing="20" AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="50">
+        <Label text="EffortLogger Register" style="-fx-font-size: 20pt;">
+            <VBox.margin>
+                <Insets bottom="20.0" />
+            </VBox.margin>
+        </Label>
+        <TextField fx:id="registerUsernameField" promptText="Username"/>
+        <PasswordField fx:id="registerPasswordField" promptText="Password"/>
+        <PasswordField fx:id="confirmPasswordField" promptText="Confirm Password"/>
+        <TextField fx:id="emailField" promptText="Email"/>
+        <Label fx:id="registerErrorMsg" textFill="RED" />
+        <Button fx:id="registerButton" text="Register" onAction="#handleRegisterUser"/>
+		<Hyperlink fx:id="loginLink" onAction="#handleGoToLogin" text="Already have an account? Login"/>
+    </VBox>
+</AnchorPane>

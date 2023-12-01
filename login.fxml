@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:controller="asuEffortLogger1.LoginController" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox alignment="CENTER" layoutX="50" layoutY="50" spacing="20" AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="50">
+        <Label text="EffortLogger Login" style="-fx-font-size: 20pt;">
+            <VBox.margin>
+                <Insets bottom="20.0" />
+            </VBox.margin>
+        </Label>
+        <TextField fx:id="usernameField" promptText="Username"/>
+        <PasswordField fx:id="passwordField" promptText="Password"/>
+        <Hyperlink text="Forgot username and password?" onAction="#handleForgotCredentials"/>
+		<Hyperlink fx:id="faqLink" onAction="#handleFAQ" text="FAQ"/>
+        <Hyperlink text="Register new user" fx:id="registerLink" onAction="#handleRegister"/>
+        <Label fx:id="errorMsg" textFill="RED" />
+        <Button fx:id="loginButton" text="Login" onAction="#handleLogin"/>
+    </VBox>
+</AnchorPane>
